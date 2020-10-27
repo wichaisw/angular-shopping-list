@@ -1,5 +1,5 @@
 // typescript shortcut
-export class Ingredient {
+export class Ingredients {
   constructor(public name: string, public amount: number) {
 
   }
