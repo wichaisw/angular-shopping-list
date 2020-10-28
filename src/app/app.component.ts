@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-shopping-list';
-  selectedSection: string = 'Recipes';
+  selectedSection: string = 'recipe';
 
-  onSectionSelected(section: string) {
+  onNavigate(section: string) {
     console.log(section)
     this.selectedSection = section;
   }

@@ -5,18 +5,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
     templateUrl: 'header.component.html',
 })
 export class HeaderComponent {
-    selectedSection: string = 'recipes';
+    selectedSection: string = 'recipe';
     @Output() sectionSelected = new EventEmitter<string>();
 
-    // onSelectRecipes(e) {
-    //     console.log(e.target.value);
+    // onSectionSelect(e: MouseEvent) {
+    //     this.sectionSelected.emit((<HTMLInputElement>e.target).innerText);
     // }
-
-    // onSelectShoppingList(e) {
-    //     console.log(e.target.value);
-    // }
-
-    onSectionSelect(e: MouseEvent) {
-        this.sectionSelected.emit((<HTMLInputElement>e.target).innerText);
+    onSectionSelect(section: string) {
+        this.sectionSelected.emit(section);
     }
 }

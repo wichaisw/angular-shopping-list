@@ -1,1 +1,11 @@
-<div>recipe item component</div>
+<a href="#" class="list-group-item clearfix" (click)="selectRecipe()">
+  <div class="float-left">
+    <!-- string interpolation -->
+    <h4 class="list-group-item border-0 pl-0">{{ recipe.name }}</h4>
+    <p class="list-group-horizontal">{{ recipe.description }}</p>
+  </div>
+  <span class="float-right">
+    <!-- property binding -->
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-fluid" style="max-height: 50px;">
+  </span>
+</a>
