@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-shopping-list';
+  selectedSection: string = 'Recipes';
+
+  onSectionSelected(section: string) {
+    console.log(section)
+    this.selectedSection = section;
+  }
 }
